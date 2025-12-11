@@ -50,20 +50,31 @@
     display: none;
     --bs-dropdown-border-color: none !important;
     --bs-dropdown-min-width: 0rem !important;
-
 }
 
-.account-overlay {
+.desktop-account .dropdown-menu {
+    position: absolute;
+    top: 70%;
+    right: 35px;
+    display: none;
+    z-index: 1001;
+}
+
+.desktop-account .account-toggle:checked~.dropdown-menu {
+    display: flex;
+}
+
+.desktop-account .account-overlay {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: 999;
     display: none;
 }
 
-.account-toggle:checked~.account-overlay {
+.desktop-account .account-toggle:checked~.account-overlay {
     display: block;
 }
 
